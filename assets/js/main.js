@@ -1,4 +1,4 @@
-﻿const BACKEND_URL = window.location.hostname === 'zaphera-coftan-pro-1.onrender.com' 
+const BACKEND_URL = window.location.hostname === 'zaphera-coftan-pro-1.onrender.com' 
   ? 'https://zaphera-coftan-pro-1-m.onrender.com' 
   : (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:') 
     ? 'http://localhost:5000' 
@@ -924,9 +924,9 @@ const reviews = {
     ['Ø§Ù„Ø¹Ø·ÙˆØ± Ø¹Ù†Ø¯Ù‡Ù… Ø«Ø¨Ø§ØªÙ‡Ø§ Ø±Ø§Ø¦Ø¹ ÙˆØªÙˆØµÙŠÙ„ Ø³Ø±ÙŠØ¹ ÙÙŠ ÙŠÙˆÙ…ÙŠÙ† ÙÙ‚Ø·.', 'Ù†ÙˆØ± Ø§Ù„Ù‡Ø¯Ù‰ØŒ Ø¹Ù†Ø§Ø¨Ø©'],
   ],
   fr: [
-    ['Le sÃ©rum d''or a transformÃ© ma peau ! Elle est plus ferme et lumineuse.', 'Sarah, Alger'],
+    ['Le sÃ©rum d\'or a transformÃ© ma peau ! Elle est plus ferme et lumineuse.', 'Sarah, Alger'],
     ['La crÃ¨me de nuit est incroyablement hydratante, parfum trÃ¨s subtil.', 'Lila, Oran'],
-    ['Le rouge Ã  lÃ¨vres mat tient toute la journÃ©e sans dessÃ©cher, j''adore.', 'Amel, Constantine'],
+    ['Le rouge Ã  lÃ¨vres mat tient toute la journÃ©e sans dessÃ©cher, j\'adore.', 'Amel, Constantine'],
     ['Leurs parfums ont une tenue exceptionnelle, livraison rapide.', 'Nour El Houda, Annaba'],
   ]
 };
