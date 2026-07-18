@@ -1,273 +1,795 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>سوقك أونلاين — تصميم وتطوير متاجر إلكترونية في الجزائر</title>
-
-<!-- SEO Meta Tags -->
-<meta name="description" content="سوقك أونلاين - تصميم وتطوير متاجر إلكترونية احترافية مخصصة لأصحاب المحلات التجارية والشركات الناشئة في الجزائر. زد مبيعاتك بنسبة 300% بدون اشتراكات شهرية.">
-<meta name="keywords" content="تصميم متاجر إلكترونية, تطوير متجر إلكتروني, تجارة إلكترونية الجزائر, متجر إلكتروني الجزائر, تصميم مواقع الجزائر, كود دي زاد, برمجة متاجر">
-<meta name="author" content="سوقك أونلاين">
-<meta name="robots" content="index, follow">
-
-<!-- Open Graph / Facebook / WhatsApp -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://username.github.io/souqok-online/">
-<meta property="og:title" content="سوقك أونلاين — تصميم وتطوير متاجر إلكترونية في الجزائر">
-<meta property="og:description" content="نحوّل محلك التقليدي إلى متجر إلكتروني يبيع لك 24/24 ساعة بدون اشتراك شهري مستمر. دفعة واحدة وملكية كاملة لمتجرك.">
-<meta property="og:image" content="https://username.github.io/souqok-online/assets/images/og-preview.png">
-<meta property="og:site_name" content="سوقك أونلاين">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://username.github.io/souqok-online/">
-<meta name="twitter:title" content="سوقك أونلاين — تصميم وتطوير متاجر إلكترونية في الجزائر">
-<meta name="twitter:description" content="نحوّل محلك التقليدي إلى متجر إلكتروني يبيع لك 24/24 ساعة بدون اشتراك شهري مستمر. دفعة واحدة وملكية كاملة لمتجرك.">
-<meta name="twitter:image" content="https://username.github.io/souqok-online/assets/images/og-preview.png">
-
-<!-- Favicon -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛍️</text></svg>">
-
-<!-- Fonts -->
+<title>زاڤيرا | ZAPHERA — دار الأزياء الفاخرة</title>
+<meta name="description" content="زاڤيرا كوفتان — تجربة أزياء فاخرة رقمية: قفطان، كراكو، فساتين سهرة وزفاف بلمسة جزائرية أصيلة.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-<!-- Custom Stylesheet -->
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@200;300;400;500;700;900&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-
-<!-- Structured Schema Markup (JSON-LD) for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "سوقك أونلاين",
-  "image": "https://username.github.io/souqok-online/assets/images/og-preview.png",
-  "description": "تصميم وتطوير متاجر إلكترونية احترافية لأصحاب المحلات في الجزائر بخبرة 6 سنوات.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressCountry": "DZ"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "28.0339",
-    "longitude": "1.6596"
-  },
-  "url": "https://username.github.io/souqok-online/",
-  "telephone": "+213550000000",
-  "priceRange": "$$"
-}
-</script>
 </head>
 <body>
 
-<div class="glow-field"><div class="g1"></div><div class="g2"></div><div class="g3"></div></div>
-<div class="scroll-progress"><i id="progressBar"></i></div>
+<div class="progress" id="progress"></div>
 
-<header>
-  <div class="wrap nav">
-    <div class="brand"><span class="mark">س</span> سوقك أونلاين</div>
-    <nav class="nav-links">
-      <a href="#why">لماذا الإنترنت</a>
-      <a href="#compare">متجرك الخاص</a>
-      <a href="#services">الخدمات</a>
-      <a href="#process">آلية العمل</a>
-      <a href="#work">أعمالي</a>
-    </nav>
-    <a href="#contact" class="nav-cta">تواصل معي ←</a>
+<div class="chapter-rail" id="rail"></div>
+
+<nav id="nav">
+  <div class="logo">لمسة <span>بيوتي</span></div>
+  <ul class="navlinks" id="navLinksList">
+    <li><a href="#collection">المجموعة</a></li>
+    <li><a href="#caftan">العناية بالبشرة</a></li>
+    <li><a href="#karakou">المكياج</a></li>
+    <li><a href="#wedding">العطور</a></li>
+    <li><a href="#reviews">آراء العميلات</a></li>
+  </ul>
+  <div class="navicons">
+    <span class="lang-switch">AR</span>
+    <button title="بحث">⚲</button>
+    <button title="المفضلة">♡</button>
+    <button title="السلة">⛃</button>
+    <button class="menu-toggle" id="menuToggleBtn" aria-label="القائمة">☰</button>
   </div>
-</header>
+</nav>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="badge reveal">مصمم متاجر إلكترونية وبائع أونلاين في الجزائر</span>
-      <h1 class="reveal">نحوّل محلك التقليدي إلى <span class="grad">متجر إلكتروني</span> يبيع لك 24/24</h1>
-      <p class="lede reveal">أصمم وأبني متاجر إلكترونية احترافية لأصحاب المحلات في الجزائر، بخبرة 6 سنوات في المجال، تساعدك توصل لزبائن أكثر وتبيع أكثر بدون ما تدفع اشتراكات شهرية باهظة.</p>
-      <div class="hero-ctas reveal">
-        <a href="#contact" class="btn-primary"><span>احجز استشارتك المجانية ←</span></a>
-        <a href="#work" class="btn-secondary">شاهد أعمالي</a>
-      </div>
-      <div class="trusted reveal">
-        <span class="mono">نشتغل في:</span>
-        <div class="tags">
-          <i>أزياء</i><i>أثاث</i><i>عطور</i><i>إلكترونيات</i><i>مواد غذائية</i>
-        </div>
+<!-- HERO -->
+<section class="hero" id="heroSection">
+  <canvas id="particles"></canvas>
+
+  <!-- Image Slider -->
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-slide active"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+    <div class="hero-slide"></div>
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="hero-overlay"></div>
+
+  <!-- Bottom page fade -->
+  <div class="hero-fog"></div>
+
+  <!-- Center content: brand name -->
+  <div class="hero-slide-label">
+    <div class="hero-brand-sub" id="heroBrandSub">دار مستحضرات التجميل والعناية الفاخرة</div>
+    <h1 class="hero-brand" id="heroBrand">لمسة <span>بيوتي</span></h1>
+    <div class="hero-divider" id="heroDivider"></div>
+    <p class="hero-tagline" id="heroTagline">سيروم الذهب · كريمات النضارة · عطور فاخرة<br>مستحضرات طبيعية مصنوعة بحب لعناية فائقة</p>
+    <div class="hero-cta-wrap" id="heroCtaWrap">
+      <a href="#collection" class="hero-cta">اكتشفي المجموعة ↙</a>
+    </div>
+  </div>
+
+  <!-- Slider arrows -->
+  <button class="hero-arrow prev" id="heroPrev" aria-label="السابق">&#8250;</button>
+  <button class="hero-arrow next" id="heroNext" aria-label="التالي">&#8249;</button>
+
+  <!-- Slider dots -->
+  <div class="hero-dots" id="heroDots">
+    <div class="hero-dot active"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+  </div>
+
+  <div class="scroll-hint"><span>مرّري للأسفل</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- RUNWAY: real video, scroll-scrubbed, mobile-first -->
+<section class="runway-wrap" id="runwayWrap">
+  <div class="runway-pin">
+    <div class="runway-figure">
+      <video id="modelVideo" src="assets/model-walk.mp4" muted playsinline webkit-playsinline="true" disablepictureinpicture preload="auto" poster="assets/model-poster.jpg" crossorigin="anonymous"></video>
+    </div>
+    <div class="runway-veil-top"></div>
+    <div class="runway-veil"></div>
+    <div class="runway-caption">
+      <div class="runway-eyebrow" id="rwEyebrow">تجربة العرض الحي</div>
+      <div style="position:relative;height:220px;width:100%;margin-top:24px;">
+        <h2 class="runway-step-title" id="rwStep0">من الطبيعة الجزائرية<br>تولد بشرة <em>أكثر إشراقاً</em></h2>
+        <h2 class="runway-step-title" id="rwStep1">مكونات طبيعية<br><em>تركيبات آمنة</em> صُنعت بعناية</h2>
+        <h2 class="runway-step-title" id="rwStep2">لمسة بيوتي<br>حيث <em>الجمال والنقاء</em> يبلغان ذروتهما</h2>
+        <h2 class="runway-step-title" id="rwStep3">عناية فائقة ببشرتكِ<br>لأن <em>صحتكِ</em> هي الفارق</h2>
+        <h2 class="runway-step-title" id="rwStep4" style="color:#d4a853;">أنتِ الملكة 👑<br>ولمسة بيوتي <em style="color:#fff;">تُتوّجكِ</em></h2>
       </div>
     </div>
-
-    <div class="hero-visual reveal">
-      <div class="orb-card">
-        <div class="orb-ring"></div>
-        <div class="storefront">
-          <div class="bar"><span></span><span></span><span></span></div>
-          <div class="grid4">
-            <div class="card"><div class="thumb"></div><div class="ln"></div><div class="ln short"></div></div>
-            <div class="card"><div class="thumb"></div><div class="ln"></div><div class="ln short"></div></div>
-            <div class="card"><div class="thumb"></div><div class="ln"></div><div class="ln short"></div></div>
-            <div class="card"><div class="thumb"></div><div class="ln"></div><div class="ln short"></div></div>
-          </div>
-        </div>
-        <div class="float-chip chip-1"><b class="count" data-target="6">0</b><span>سنوات خبرة</span></div>
-        <div class="float-chip chip-2"><b class="count" data-target="40">0</b><span>متجر تم إطلاقه</span></div>
-      </div>
-    </div>
+    <div class="runway-progress" id="rwProgress"><i id="runwayFill"></i></div>
+    <div class="runway-step-label" id="runwayLabel">تبدأ المسيرة</div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
-  <div class="wrap">
-    <div class="stats-glass reveal">
-      <div class="stat-card"><div class="num count" data-target="40">0</div><div class="lbl">متجر تم تسليمه</div></div>
-      <div class="stat-card"><div class="num count" data-target="6">0</div><div class="lbl">سنوات خبرة</div></div>
-      <div class="stat-card"><div class="num count" data-target="98">0</div><div class="lbl">% رضا العملاء</div></div>
-      <div class="stat-card"><div class="num count" data-target="15">0</div><div class="lbl">قطاع تجاري</div></div>
-    </div>
+<!-- CHAPTER 1: INTRO -->
+<section class="chapter" id="intro" data-title="مقدمة فاخرة">
+  <div class="chapter-head">
+    <div class="chapter-num">١</div>
+    <h2 class="chapter-title reveal">مستحضرات <em>طبيعية</em> بلمسة احترافية</h2>
+  </div>
+  <div class="intro-grid">
+    <p class="chapter-desc reveal">كل مستحضر في لمسة بيوتي يُصنع بتركيبات طبيعية آمنة وفعالة، بأيدي خبراء في العناية بالبشرة ومستحضرات التجميل، ليكون الخيار الأمثل لجمالكِ اليومي بلمسة جزائرية فاخرة.</p>
+    <div class="intro-visual reveal"><div class="arch"></div></div>
+  </div>
+  <div class="stat-row reveal">
+    <div class="stat"><b>+12</b><span>سنة خبرة</span></div>
+    <div class="stat"><b>+4500</b><span>عميلة سعيدة</span></div>
+    <div class="stat"><b>100%</b><span>منتجات طبيعية</span></div>
   </div>
 </section>
 
-<section class="section" id="why">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="tag">لماذا الإنترنت</span>
-      <h2>محلك مفتوح 24 ساعة، مش بس من 9 إلى 5</h2>
-      <p>أصحاب المحلات في الجزائر ديما يشتكوا من قلة الزبائن أو المنافسة في نفس الحي. الحل مش تغيير المكان، الحل إنك توسّع السوق.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal"><div class="icon">🌍</div><h3>جمهور من كل الوطن</h3><p>بدل ما تنتظر الزبون يمر قدام المحل، متجرك يوصل لأي ولاية، وتبيع لزبائن ماكانوش يعرفوك أصلاً.</p></div>
-      <div class="why-card reveal"><div class="icon">🌙</div><h3>تبيع وأنت مرتاح</h3><p>الطلبات تدخل حتى في الليل والعطل، والمتجر يشتغل لوحده بدون ما تكون حاضر كل وقت.</p></div>
-      <div class="why-card reveal"><div class="icon">🤝</div><h3>ثقة أكثر عند الزبون</h3><p>متجر مرتب واحترافي يبيّن جدية المحل، ويخلي الزبون يشري بثقة أكثر من صفحة سوشيال ميديا عادية.</p></div>
-    </div>
+<div class="divider"></div>
+
+<!-- CHAPTER 2: NEW COLLECTION -->
+<section class="chapter" id="collection" data-title="المجموعة الجديدة">
+  <div class="chapter-head">
+    <div class="chapter-num">٢</div>
+    <h2 class="chapter-title reveal">مجموعة <em>العناية</em> الجديدة</h2>
+  </div>
+  <p class="chapter-desc reveal" style="margin-bottom:50px;">أحدث تركيبات العناية بالبشرة والمكياج المستخلصة من مكونات طبيعية 100%.</p>
+  <div class="product-grid" id="grid-new"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CHAPTER 3: CAFTAN -->
+<section class="chapter" id="caftan" data-title="القفطان الفاخر">
+  <div class="chapter-head">
+    <div class="chapter-num">٣</div>
+    <h2 class="chapter-title reveal">روتين <em>العناية بالبشرة</em></h2>
+  </div>
+  <p class="chapter-desc reveal" style="margin-bottom:50px;">كريمات ليلية وسيروم نضارة لتغذية البشرة وتجديد خلاياها بعمق.</p>
+  <div class="product-grid" id="grid-caftan"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CHAPTER 4: KARAKOU -->
+<section class="chapter" id="karakou" data-title="الكراكو الجزائري">
+  <div class="chapter-head">
+    <div class="chapter-num">٤</div>
+    <h2 class="chapter-title reveal">مستحضرات <em>المكياج والتجميل</em></h2>
+  </div>
+  <p class="chapter-desc reveal" style="margin-bottom:50px;">أحمر شفاه مخملي، ظلال عيون، وعلب مكياج متكاملة لإطلالة ساحرة.</p>
+  <div class="product-grid" id="grid-karakou"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CHAPTER 5: WEDDING -->
+<section class="chapter" id="wedding" data-title="مجموعة الزفاف">
+  <div class="chapter-head">
+    <div class="chapter-num">٥</div>
+    <h2 class="chapter-title reveal">العطور <em>الفاخرة</em></h2>
+  </div>
+  <p class="chapter-desc reveal" style="margin-bottom:50px;">عطور راقية تدوم طويلاً بتركيبة مركزة ونغمات ساحرة تليق بحضورك.</p>
+  <div class="product-grid" id="grid-wedding"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CHAPTER 6: BEST SELLERS -->
+<section class="chapter" id="bestsellers" data-title="الأكثر مبيعًا">
+  <div class="chapter-head">
+    <div class="chapter-num">٦</div>
+    <h2 class="chapter-title reveal">الأكثر <em>طلبًا</em></h2>
+  </div>
+  <p class="chapter-desc reveal" style="margin-bottom:50px;">مستحضرات التجميل والعناية الأكثر شعبية بين عميلاتنا هذا الموسم.</p>
+  <div class="product-grid" id="grid-best"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CHAPTER 7: CRAFTSMANSHIP -->
+<section class="chapter" id="craft" data-title="الحرفية">
+  <div class="chapter-head">
+    <div class="chapter-num">٧</div>
+    <h2 class="chapter-title reveal">رحلة <em>الصنع والجودة</em></h2>
+  </div>
+  <div class="timeline">
+    <div class="tstep reveal"><h4>01 — اختيار المكونات</h4><p>نختار أجود الزيوت الأساسية والمستخلصات الطبيعية العضوية من مصادر موثوقة لضمان أمان وفعالية المنتج.</p></div>
+    <div class="tstep reveal"><h4>02 — التركيبة والاختبار</h4><p>يتم تركيب المستحضرات واختبارها مخبرياً لضمان ملاءمتها لمختلف أنواع البشرة وخلوها من المواد الضارة.</p></div>
+    <div class="tstep reveal"><h4>03 — الصنع والتعبئة</h4><p>يتم تحضير المنتجات في ظروف معقمة تماماً وتعبئتها في عبوات تحافظ على جودة وفعالية التركيبة.</p></div>
+    <div class="tstep reveal"><h4>04 — التصميم والتغليف</h4><p>نصمم عبوات أنيقة وتغليفاً فاخراً يحمي المنتج ويعكس رقي العلامة كهدية مميزة لكِ.</p></div>
+    <div class="tstep reveal"><h4>05 — الشحن والتوصيل</h4><p>يتم شحن طلبيتكِ مغلفة بعناية تامة لتصلكِ في أفضل حالة أينما كنتِ في الجزائر.</p></div>
   </div>
 </section>
 
-<section class="section" id="compare">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="tag">متجرك الخاص</span>
-      <h2>ليش تدفع اشتراك شهري لمنصة، وأنت تقدر تملك متجرك بالكامل؟</h2>
-      <p>شوبيفاي، يوكان، إيزي أوردرز... كلها منصات جاهزة تخلّيك "مستأجر" في متجرك: تدفع كل شهر، وتبقى مربوط بقواعدهم وحدودهم. أنا نبنيلك متجر خاص بيك 100%، بتصميم فريد وتكلفة أقل على المدى الطويل، وما تدفعش عمولة على كل عملية بيع.</p>
-    </div>
+<div class="divider"></div>
 
-    <div class="compare-wrap reveal">
-      <div class="compare-row compare-head">
-        <div class="feat">المقارنة</div>
-        <div class="them">المنصات الجاهزة</div>
-        <div class="us">متجرك الخاص</div>
-      </div>
-      <div class="compare-row">
-        <div class="feat">التكلفة الشهرية</div>
-        <div class="them"><span class="ic no">✕</span> اشتراك شهري مستمر ما يوقفش</div>
-        <div class="us"><span class="ic yes">✓</span> دفعة واحدة، ملكية دائمة</div>
-      </div>
-      <div class="compare-row">
-        <div class="feat">عمولة على المبيعات</div>
-        <div class="them"><span class="ic no">✕</span> نسبة من كل عملية بيع</div>
-        <div class="us"><span class="ic yes">✓</span> 0% عمولة، الربح كامل ليك</div>
-      </div>
-      <div class="compare-row">
-        <div class="feat">التصميم</div>
-        <div class="them"><span class="ic no">✕</span> قوالب جاهزة يشاركها آلاف المتاجر</div>
-        <div class="us"><span class="ic yes">✓</span> تصميم فريد يعكس هوية محلك فقط</div>
-      </div>
-      <div class="compare-row">
-        <div class="feat">الملكية والتحكم</div>
-        <div class="them"><span class="ic no">✕</span> بياناتك ومتجرك محبوسين بالمنصة</div>
-        <div class="us"><span class="ic yes">✓</span> المتجر ملكك بالكامل، تتحكم فيه براحتك</div>
-      </div>
-      <div class="compare-row">
-        <div class="feat">سهولة الاستخدام</div>
-        <div class="them"><span class="ic yes">✓</span> لوحة تحكم عامة معقدة أحيانًا</div>
-        <div class="us"><span class="ic yes">✓</span> لوحة تحكم مبسطة، مصممة على قد احتياجك بالضبط</div>
-      </div>
-    </div>
-
-    <div class="compare-note reveal"><span>◆</span> النتيجة: <b>توفير حقيقي في التكاليف</b> على المدى الطويل، مع متجر يشبهك أنت، مو نسخة من متجر جارك.</div>
+<!-- CHAPTER 8: REVIEWS -->
+<section class="chapter" id="reviews" data-title="آراء العميلات">
+  <div class="chapter-head">
+    <div class="chapter-num">٨</div>
+    <h2 class="chapter-title reveal">قالت <em>عميلاتنا</em></h2>
   </div>
+  <div class="review-track" id="reviewTrack"></div>
 </section>
 
-<section class="section" id="services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="tag">الخدمات</span>
-      <h2>كل اللي يحتاجه محلك باش يبيع أونلاين</h2>
-      <p>من الفكرة إلى المتجر الجاهز للبيع، نتكفل بكل التفاصيل.</p>
-    </div>
-    <div class="services-grid">
-      <div class="svc-card reveal"><div class="svc-icon">🎨</div><h3>تصميم متجر كامل</h3><p>واجهة عصرية تشجع على الشراء المباشر.</p></div>
-      <div class="svc-card reveal"><div class="svc-icon">💳</div><h3>الدفع والتوصيل</h3><p>ربط وسائل الدفع المحلية وشركات التوصيل.</p></div>
-      <div class="svc-card reveal"><div class="svc-icon">📦</div><h3>إدارة المخزون</h3><p>لوحة تحكم بسيطة لمتابعة الطلبات والمبيعات.</p></div>
-      <div class="svc-card reveal"><div class="svc-icon">📈</div><h3>تسويق ووصول</h3><p>ربط بالسوشيال ميديا وتهيئة لمحركات البحث.</p></div>
-    </div>
+<div class="divider"></div>
+
+<!-- CHAPTER 9: INSTAGRAM -->
+<section class="chapter" id="instagram" data-title="معرض إنستقرام">
+  <div class="chapter-head">
+    <div class="chapter-num">٩</div>
+    <h2 class="chapter-title reveal">تابعينا <a href="https://www.instagram.com/lamsa_beauty_dz/" target="_blank" style="color:var(--gold);text-decoration:none;border-bottom:1px dashed var(--gold);">@lamsa_beauty_dz</a></h2>
   </div>
+  <div class="insta-grid" id="instaGrid"></div>
 </section>
 
-<section class="section" id="process">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="tag">آلية العمل</span>
-      <h2>أربع خطوات من الفكرة للمتجر شغّال</h2>
-    </div>
-    <div class="process-line">
-      <div class="step reveal"><div class="step-bar"></div><span class="step-dot">01</span><h4>نتعرف على محلك</h4><p>نناقش منتجاتك وزبائنك وأهدافك.</p></div>
-      <div class="step reveal"><div class="step-bar"></div><span class="step-dot">02</span><h4>تصميم وتجربة</h4><p>نصمم واجهة تناسب هوية محلك.</p></div>
-      <div class="step reveal"><div class="step-bar"></div><span class="step-dot">03</span><h4>بناء وربط</h4><p>نبني المتجر ونربطه بالدفع والتوصيل.</p></div>
-      <div class="step reveal"><div class="step-bar"></div><span class="step-dot">04</span><h4>إطلاق ومتابعة</h4><p>نطلق المتجر ونبقى معك للدعم.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="work">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="tag">أعمالي</span>
-      <h2>نماذج من متاجر بنيتها لأصحاب محلات حقيقيين</h2>
-      <p>كل مشروع مبني حسب طبيعة السلعة والجمهور المستهدف.</p>
-    </div>
-    <div class="portfolio-grid">
-      <div class="p-card reveal"><div class="p-thumb a">متجر أزياء</div><div class="p-body"><span class="k mono">أزياء نسائية</span><h4>لمسة — بوتيك أونلاين</h4><p>تحويل محل ملابس تقليدي إلى متجر بزيادة 3 أضعاف في الطلبات.</p></div></div>
-      <div class="p-card reveal"><div class="p-thumb b">متجر أثاث</div><div class="p-body"><span class="k mono">أثاث منزلي</span><h4>بيت وذوق</h4><p>عرض قطع الأثاث بصور واضحة وتفاصيل توصيل دقيقة.</p></div></div>
-      <div class="p-card reveal"><div class="p-thumb c">متجر عطور</div><div class="p-body"><span class="k mono">عطور وتجميل</span><h4>عطر الأصالة</h4><p>واجهة فاخرة تليق بمنتج فاخر، مع دفع آمن وسريع.</p></div></div>
-      <div class="p-card reveal"><div class="p-thumb d">متجر إلكترونيات</div><div class="p-body"><span class="k mono">إلكترونيات</span><h4>تِك بوينت</h4><p>مقارنة منتجات وفلاتر بحث تسهّل قرار الشراء.</p></div></div>
-      <div class="p-card reveal"><div class="p-thumb e">متجر أطفال</div><div class="p-body"><span class="k mono">مستلزمات أطفال</span><h4>حضانة الصغار</h4><p>تصميم دافئ وودي يعكس ثقة الأهل في المنتج.</p></div></div>
-      <div class="p-card reveal"><div class="p-thumb f">متجر مواد غذائية</div><div class="p-body"><span class="k mono">مواد غذائية</span><h4>سوق البيت</h4><p>طلب سريع وتوصيل منظم لمنتجات يومية.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="quote-card reveal">
-      <div class="mark">"</div>
-      <p>كنت متردد بزاف نبيع أونلاين، وبعد المتجر تضاعفت مبيعاتي في أقل من شهرين. الزبائن يلقاو كلش بسهولة.</p>
-      <div class="who"><div class="av"></div><span class="mono">صاحب محل — قطاع الأزياء</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="wrap">
-    <div class="cta-section reveal">
-      <span class="badge" style="margin:0 auto 20px;">جاهز نبدأو؟</span>
-      <h2>وقتها بدّل محلك لمتجر يبيع 24/24</h2>
-      <p>احجز استشارة مجانية اليوم، ونشوف واحدين كيفاش نوصلو منتجاتك لجمهور أكبر.</p>
-      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-        <a href="#" class="btn-primary"><span>احجز استشارتك المجانية ←</span></a>
-        <a href="#" class="whatsapp-btn">تواصل عبر واتساب ↗</a>
-      </div>
-    </div>
-  </div>
+<!-- CHAPTER 10: FINAL CTA -->
+<section class="final-cta" id="final" data-title="ابدئي رحلتك">
+  <div class="eyebrow reveal">جمالكِ يستحق رعاية استثنائية</div>
+  <h2 class="reveal">تسوّقي مجموعتكِ <em>الفاخرة</em> اليوم</h2>
+  <p class="reveal">توصيل لجميع الولايات · الدفع عند الاستلام · إرجاع سهل وسريع</p>
+  <a href="#collection" class="hero-cta reveal" style="margin-top:40px;">تسوّقي الآن</a>
 </section>
 
 <footer>
-  <div class="wrap foot-row">
-    <div class="brand"><span class="mark">س</span> سوقك أونلاين</div>
-    <div class="foot-links"><a href="#services">الخدمات</a><a href="#work">أعمالي</a><a href="#contact">تواصل</a></div>
-    <div class="foot-copy">© 2026 — تصميم وتطوير متاجر إلكترونية، الجزائر</div>
+  <div>
+    <div class="logo" style="margin-bottom:16px;">لمسة <span>بيوتي</span></div>
+    <p style="color:var(--grey);font-size:.85rem;max-width:280px;line-height:1.9;">دار مستحضرات التجميل والعناية الفاخرة بالبشرة، نقدم منتجات طبيعية 100% بتركيبات آمنة وفعالة صنعت بحب.</p>
   </div>
+  <div><h4>المتجر</h4><ul><li><a href="#collection">المجموعة الجديدة</a></li><li><a href="#caftan">العناية بالبشرة</a></li><li><a href="#karakou">المكياج</a></li><li><a href="#wedding">العطور</a></li></ul></div>
+  <div><h4>خدمة العملاء</h4><ul><li><a href="#">طريقة الاستخدام</a></li><li><a href="#">الشحن والتوصيل</a></li><li><a href="#">سياسة الإرجاع والاستبدال</a></li><li><a href="#">تواصلي معنا</a></li></ul></div>
+  <div><h4>تابعينا</h4><ul><li><a href="https://www.instagram.com/lamsa_beauty_dz/" target="_blank">Instagram</a></li><li><a href="#">TikTok</a></li><li><a href="#">Facebook</a></li></ul></div>
+  <div class="footer-bottom">© 2026 LAMSA BEAUTY — جميع الحقوق محفوظة</div>
 </footer>
 
+<!-- CART DRAWER -->
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-overlay" id="cartOverlay"></div>
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <h3 id="txtCartTitle">سلة المشتريات (<span id="cartCount">0</span>)</h3>
+      <button class="drawer-close" id="cartCloseBtn">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="cart-empty" id="cartEmptyMsg">سلتك فارغة حالياً. تصفحي المجموعة وأضيفي ما يعجبك.</div>
+      <div class="cart-items" id="cartItemsList"></div>
+      
+      <!-- Checkout Form -->
+      <div class="checkout-section" id="checkoutSection" style="display:none; margin-top: 30px;">
+        <div class="divider" style="margin: 20px 0 30px; height: 1px; background: var(--line);"></div>
+        <h4 id="txtCheckoutTitle">اتمام الطلب (الدفع عند الاستلام)</h4>
+        <form id="checkoutForm">
+          <div class="form-group">
+            <label for="clientName" id="lblClientName">الاسم الكامل *</label>
+            <input type="text" id="clientName" required placeholder="مثال: سارة أحمد">
+          </div>
+          <div class="form-group">
+            <label for="clientPhone" id="lblClientPhone">رقم الهاتف *</label>
+            <input type="tel" id="clientPhone" required placeholder="مثال: 0770123456">
+          </div>
+          <div class="form-group">
+            <label for="clientWilaya" id="lblClientWilaya">الولاية *</label>
+            <select id="clientWilaya" required>
+              <option value="" disabled selected>اختر الولاية...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="clientAddress" id="lblClientAddress">العنوان الكامل *</label>
+            <input type="text" id="clientAddress" required placeholder="مثال: حي 5 جويلية، عمارة 4، الجزائر">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="drawer-footer" id="cartFooter" style="display:none;">
+      <div class="price-row">
+        <span id="txtSubtotal">المجموع الفرعي:</span>
+        <span id="cartSubtotal">0 دج</span>
+      </div>
+      <div class="price-row">
+        <span id="txtShipping">تكلفة الشحن:</span>
+        <span id="cartShipping">0 دج</span>
+      </div>
+      <div class="price-row total">
+        <span id="txtTotal">المجموع الإجمالي:</span>
+        <span id="cartTotal">0 دج</span>
+      </div>
+      <button class="checkout-btn" id="submitOrderBtn">تأكيد طلبكِ الآن ↙</button>
+    </div>
+  </div>
+</div>
+
+<!-- WISHLIST DRAWER -->
+<div class="drawer" id="wishlistDrawer">
+  <div class="drawer-overlay" id="wishlistOverlay"></div>
+  <div class="drawer-content">
+    <div class="drawer-header">
+      <h3 id="txtWishlistTitle">المفضلة (<span id="wishlistCount">0</span>)</h3>
+      <button class="drawer-close" id="wishlistCloseBtn">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <div class="wishlist-empty" id="wishlistEmptyMsg">قائمة المفضلة فارغة حالياً.</div>
+      <div class="wishlist-items" id="wishlistItemsList"></div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal" id="quickViewModal">
+  <div class="modal-overlay" id="qvOverlay"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="qvCloseBtn">&times;</button>
+    <div class="qv-grid">
+      <div class="qv-gallery">
+        <img id="qvImage" src="" alt="صورة المنتج">
+      </div>
+      <div class="qv-details">
+        <span class="tag" id="qvTag" style="display:none;"></span>
+        <h3 id="qvTitle">اسم المنتج</h3>
+        <div class="price-row" style="justify-content: flex-start; align-items: baseline; gap: 10px; margin-bottom: 12px;">
+          <span id="qvPrice" class="price" style="font-size: 1.4rem; color: var(--gold); font-weight: 700;"></span>
+          <s id="qvOldPrice" class="old-price" style="color: var(--grey); font-size: 0.95rem;"></s>
+        </div>
+        <p id="qvDescription" class="desc">وصف المنتج الفاخر...</p>
+        
+        <div class="divider" style="margin:20px 0; height: 1px; background: var(--line);"></div>
+        
+        <div class="selector-group">
+          <label id="lblSize">النوع:</label>
+          <div class="size-options" id="qvSizesContainer">
+            <button class="size-btn active" data-size="38">38</button>
+            <button class="size-btn" data-size="40">40</button>
+            <button class="size-btn" data-size="42">42</button>
+            <button class="size-btn" data-size="44">44</button>
+            <button class="size-btn" data-size="custom" id="customSizeBtn">طلب عبوة مخصصة 📏</button>
+          </div>
+        </div>
+        
+        <!-- Custom measurements inputs -->
+        <div class="custom-measurements" id="customMeasurementsSection" style="display:none;">
+          <h4 id="txtCustomFittingTitle">الرغبات الخاصة أو نوع البشرة (اختياري):</h4>
+          <div class="measurements-grid">
+            <div class="form-group">
+              <label id="lblChest">نوع البشرة</label>
+              <input type="number" id="mChest" placeholder="80-120">
+            </div>
+            <div class="form-group">
+              <label id="lblWaist">المشاكل المستهدفة</label>
+              <input type="number" id="mWaist" placeholder="60-100">
+            </div>
+            <div class="form-group">
+              <label id="lblHips">العمر التقديري</label>
+              <input type="number" id="mHips" placeholder="85-125">
+            </div>
+            <div class="form-group">
+              <label id="lblShoulders">ملاحظات إضافية</label>
+              <input type="number" id="mShoulders" placeholder="35-48">
+            </div>
+            <div class="form-group">
+              <label id="lblHeight">حجم العبوة المطلوبة</label>
+              <input type="number" id="mHeight" placeholder="130-170">
+            </div>
+          </div>
+          <p class="custom-note" id="txtCustomFittingNote">* سيتم تركيب المستحضر وتخصيصه ليتناسب مع احتياجاتكِ وبشرتكِ بشكل فريد.</p>
+        </div>
+        
+        <div class="qty-and-cart" style="margin-top:24px;">
+          <div class="qty-selector">
+            <button id="qtyDec">-</button>
+            <span id="qvQty">1</span>
+            <button id="qtyInc">+</button>
+          </div>
+          <button class="add-to-cart-btn" id="qvAddToCartBtn">أضيفي للسلة</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" id="searchCloseBtn">&times;</button>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="ابحثي عن كريم، سيروم، عطر...">
+    <div class="search-results" id="searchResultsGrid" class="product-grid">
+      <!-- Live search results dynamically loaded -->
+    </div>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL / INVOICE RECEIPT -->
+<div class="modal" id="successModal">
+  <div class="modal-overlay" id="successOverlay"></div>
+  <div class="modal-content success-content">
+    <div class="success-icon">✓</div>
+    <h3 id="txtSuccessTitle">شكراً لطلبكِ الفاخر!</h3>
+    <p id="txtSuccessDesc">تم استلام طلبكِ بنجاح تحت الرقم: <strong id="successOrderId">#LB-1002</strong></p>
+    <p style="color:var(--grey); font-size:0.9rem; margin-top:8px;" id="txtSuccessNote">سيتصل بكِ فريق مبيعات لمسة بيوتي خلال 24 ساعة لتأكيد معلومات الشحن وبدء التحضير.</p>
+    
+    <div id="successDigitalDelivery" style="display:none; background:rgba(212,175,55,0.1); border:1px dashed #d4af37; padding:15px; border-radius:8px; margin:15px 0; color:#fff; direction:rtl; text-align:right;">
+      <div style="font-weight:700; color:#d4af37; margin-bottom:6px;">🔑 كود تسليم المنتج الرقمي:</div>
+      <div id="successDigitalCode" style="font-family:monospace; font-size:1.1rem; letter-spacing:1px; background:#111; padding:8px; border-radius:4px; border:1px solid #333; text-align:center;"></div>
+    </div>
+    
+    <div class="invoice-box" id="invoiceBox">
+      <!-- Dynamic Invoice details will be shown here -->
+    </div>
+    
+    <button class="checkout-btn" id="successCloseBtn" style="margin-top:20px;">متابعة التسوق</button>
+  </div>
+</div>
+
+<!-- ======================================================
+     PRODUCT PAGE — Full-screen, high-conversion order page
+     ====================================================== -->
+<div class="product-page" id="productPage">
+  <div class="pp-inner">
+
+    <!-- Urgency bar -->
+    <div class="pp-urgency-bar" id="ppUrgencyBar">
+      🔥 عرض محدود · الطلبات تُغلق خلال <span id="ppTimerInline">--:--</span> · الشحن مجاني هذا اليوم!
+    </div>
+
+    <!-- Top navigation -->
+    <div class="pp-topbar">
+      <div class="logo">لمسة <span>بيوتي</span></div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div style="font-size:0.78rem;color:var(--grey);" id="ppLiveViewers">
+          👁 <span id="ppViewerCount">12</span> شخصاً يتصفحان هذا المنتج الآن
+        </div>
+        <button class="pp-back" id="ppBackBtn">← العودة للمتجر</button>
+      </div>
+    </div>
+
+    <!-- HERO SPLIT: Image + Details -->
+    <div class="pp-hero">
+      <!-- Gallery Side -->
+      <div class="pp-gallery" id="ppGallery">
+        <div class="pp-gallery-img" id="ppGalleryImg"></div>
+        <div class="pp-gallery-thumbs" id="ppGalleryThumbs"></div>
+        <div class="pp-gallery-overlay"></div>
+        <div class="pp-gallery-badge" id="ppGalleryBadge" style="display:none;"></div>
+      </div>
+
+      <!-- Details Side -->
+      <div class="pp-details">
+        <div class="pp-breadcrumb">لمسة بيوتي / <span id="ppCategory">العناية بالبشرة</span></div>
+        <h1 class="pp-title" id="ppTitle">اسم المنتج</h1>
+        <p class="pp-subtitle" id="ppSubtitle">منتجات طبيعية · جزائر الفخامة</p>
+
+        <!-- Stars -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <span style="color:var(--gold);font-size:1.1rem;">★★★★★</span>
+          <span style="font-size:0.8rem;color:var(--grey);">(<span id="ppReviewCount">248</span> تقييم)</span>
+          <span style="font-size:0.78rem;color:#4caf50;font-weight:600;">✔ متوفر في المخزون</span>
+        </div>
+
+        <!-- Price -->
+        <div class="pp-price-wrap">
+          <span class="pp-price" id="ppPrice">0 دج</span>
+          <span class="pp-old-price" id="ppOldPrice" style="display:none;"></span>
+          <span class="pp-discount-badge" id="ppDiscountBadge" style="display:none;"></span>
+        </div>
+
+        <!-- Social Proof Counters -->
+        <div class="pp-social-proof">
+          <div class="pp-sp-item">
+            <strong>+4500</strong>عميلة سعيدة
+          </div>
+          <div class="pp-sp-item">
+            <strong>★ 4.9</strong>تقييم مميّز
+          </div>
+          <div class="pp-sp-item">
+            <strong>24h</strong>توصيل سريع
+          </div>
+          <div class="pp-sp-item">
+            <strong>100%</strong>يدوي أصيل
+          </div>
+        </div>
+
+        <!-- Description -->
+        <p class="pp-desc-title">وصف القطعة</p>
+        <p class="pp-desc-text" id="ppDesc">وصف المنتج الفاخر...</p>
+
+        <!-- Features -->
+        <div class="pp-features" id="ppFeatures">
+          <div class="pp-feature"><div class="pp-feature-icon">🧵</div><span>تركيبات طبيعية وعضوية 100%</span></div>
+          <div class="pp-feature"><div class="pp-feature-icon">🪡</div><span>زيوت أساسية ومستخلصات عشبية نقية</span></div>
+          <div class="pp-feature"><div class="pp-feature-icon">✂️</div><span>مختبر سريرياً وآمن لجميع أنواع البشرة</span></div>
+          <div class="pp-feature"><div class="pp-feature-icon">📦</div><span>تغليف فاخر لحماية وفعالية التركيبة</span></div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="pp-trust">
+          <div class="pp-trust-item"><span>🚚</span><span>توصيل لجميع ولايات الجزائر</span></div>
+          <div class="pp-trust-item"><span>💰</span><span>الدفع عند الاستلام</span></div>
+          <div class="pp-trust-item"><span>↩️</span><span>إرجاع مجاني خلال 14 يوم</span></div>
+          <div class="pp-trust-item"><span>🔒</span><span>معاملة آمنة 100%</span></div>
+        </div>
+
+        <!-- Divider -->
+        <!-- Warranty Badge / Certificate -->
+        <div style="border: 2px double var(--gold); padding: 22px; background: rgba(184,134,58,0.04); text-align: center; margin-bottom: 28px; position: relative;">
+          <div style="font-family:'Cairo',sans-serif; font-size: 1.35rem; color: var(--gold); margin-bottom: 8px;">📜 عهد لمسة بيوتي لضمان الفعالية والجودة</div>
+          <p style="font-size: 0.82rem; color: var(--grey); line-height: 1.8; margin: 0 auto; max-width: 480px;">
+            نحن نلتزم بتقديم مستحضرات تفوق توقعاتكِ من حيث الفعالية والنقاء. إن لم يناسب المنتج بشرتكِ أو واجهتِ أي ملاحظة، نوفر لكِ **استبدالاً أو استرجاعاً مجانياً بالكامل** خلال 14 يوماً من الاستلام. رضاكِ المطلق هو عهدنا الجمالي.
+          </p>
+        </div>
+
+        <!-- ===== HIGH-CONVERSION ORDER FORM ===== -->
+        <div class="pp-order-section">
+          <h2 class="pp-order-title">🛍️ اطلبي مستحضركِ الآن</h2>
+          <p class="pp-order-subtitle">أكملي البيانات أدناه وسنتصل بكِ خلال ساعات لتأكيد طلبكِ وتفاصيل المقاس — الدفع عند الاستلام!</p>
+
+          <form id="ppOrderForm" novalidate>
+
+            <!-- Name + Phone -->
+            <div class="pp-form-grid">
+              <div class="pp-field">
+                <label for="ppName"><span class="req">*</span> الاسم الكامل</label>
+                <input type="text" id="ppName" placeholder="مثال: فاطمة بن علي" autocomplete="name" required>
+              </div>
+              <div class="pp-field">
+                <label for="ppPhone"><span class="req">*</span> رقم الهاتف</label>
+                <input type="tel" id="ppPhone" placeholder="05 / 06 / 07 xxxxxxxx" autocomplete="tel" required>
+              </div>
+            </div>
+
+            <!-- Wilaya -->
+            <div class="pp-form-grid">
+              <div class="pp-field pp-form-full">
+                <label for="ppWilaya"><span class="req">*</span> الولاية</label>
+                <div class="pp-select-wrap">
+                  <select id="ppWilaya" required>
+                    <option value="" disabled selected>اختاري الولاية...</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Full address -->
+            <div class="pp-form-grid">
+              <div class="pp-field pp-form-full">
+                <label for="ppAddress"><span class="req">*</span> العنوان الكامل</label>
+                <input type="text" id="ppAddress" placeholder="الحي، الشارع، رقم البناية..." autocomplete="street-address" required>
+              </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="pp-order-summary">
+              <h5>ملخص الطلب</h5>
+              <div class="pp-sum-row">
+                <span id="ppSumProduct">المنتج</span>
+                <span id="ppSumPrice">—</span>
+              </div>
+              <div class="pp-sum-row">
+                <span>تكلفة الشحن</span>
+                <span id="ppSumShipping">اختاري الولاية</span>
+              </div>
+              <div class="pp-sum-row total">
+                <span>الإجمالي</span>
+                <span id="ppSumTotal">—</span>
+              </div>
+            </div>
+
+            <!-- CTA Button -->
+            <button type="submit" class="pp-submit-btn" id="ppSubmitBtn">
+              <span class="btn-text">✨ تأكيدي طلبي الآن — الدفع عند الاستلام</span>
+              <div class="btn-spinner" id="ppSpinner"></div>
+            </button>
+
+            <!-- Micro Trust -->
+            <div class="pp-micro-trust">
+              <span><i>✔</i> بدون دفع مسبق</span>
+              <span><i>🔒</i> بياناتكِ محمية</span>
+              <span><i>⚡</i> تأكيد خلال ساعات</span>
+              <span><i>↩️</i> إرجاع مضمون 14 يوم</span>
+            </div>
+
+          </form>
+        </div>
+        <!-- End Order Form -->
+
+      </div>
+      <!-- End Details Side -->
+    </div>
+    <!-- End HERO -->
+
+    <!-- BELOW THE FOLD CONTENT -->
+    <div class="pp-body">
+
+      <!-- Urgency Countdown -->
+      <div class="pp-countdown" id="ppCountdown">
+        <h3>⏳ هذا العرض الحصري ينتهي خلال:</h3>
+        <p class="pp-countdown-label">لا تفوّتي الفرصة — الأسعار ترتفع بعد انتهاء العرض</p>
+        <div class="pp-timer">
+          <div class="pp-timer-unit">
+            <span class="pp-timer-num" id="ppCdHours">02</span>
+            <span class="pp-timer-label">ساعة</span>
+          </div>
+          <div class="pp-timer-unit" style="font-size:2rem;color:var(--gold);align-self:center;padding-bottom:20px;">:</div>
+          <div class="pp-timer-unit">
+            <span class="pp-timer-num" id="ppCdMinutes">34</span>
+            <span class="pp-timer-label">دقيقة</span>
+          </div>
+          <div class="pp-timer-unit" style="font-size:2rem;color:var(--gold);align-self:center;padding-bottom:20px;">:</div>
+          <div class="pp-timer-unit">
+            <span class="pp-timer-num" id="ppCdSeconds">17</span>
+            <span class="pp-timer-label">ثانية</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Zaphera -->
+      <h2 class="pp-section-title">لماذا تختارين <em>لمسة بيوتي</em>؟</h2>
+      <p class="pp-section-sub">نحن لا نبيع مجرد مستحضرات — نحن نقدم لكِ سحر العناية الحقيقية</p>
+
+      <div class="pp-benefits-grid">
+        <div class="pp-benefit">
+          <span class="pp-benefit-icon">🧵</span>
+          <h4>حرفة يدوية 100%</h4>
+          <p>كل غرزة وكل خيط ذهب يُنسج بأيدي حرفيات جزائريات ماهرات يحملن سرّ التراث الأصيل</p>
+        </div>
+        <div class="pp-benefit">
+          <span class="pp-benefit-icon">👑</span>
+          <h4>فخامة لا مثيل لها</h4>
+          <p>مكونات مختارة بعناية فائقة من أصول طبيعية وعضوية — تشعر بها بشرتكِ ويظهر الفرق</p>
+        </div>
+        <div class="pp-benefit">
+          <span class="pp-benefit-icon">✂️</span>
+          <h4>مقاس يناسبكِ</h4>
+          <p>تركيبات احترافية تبرز نضارة بشرتكِ — نوفر أيضاً تركيبات مخصصة بطلب خاص</p>
+        </div>
+        <div class="pp-benefit">
+          <span class="pp-benefit-icon">🚚</span>
+          <h4>توصيل لكل الجزائر</h4>
+          <p>نوصل لجميع الـ 58 ولاية — الدفع عند الاستلام فقط، بدون أي مخاطرة منكِ</p>
+        </div>
+        <div class="pp-benefit">
+          <span class="pp-benefit-icon">💬</span>
+          <h4>خدمة عملاء فورية</h4>
+          <p>فريق متخصص يردّ على استفساراتكِ خلال دقائق عبر الهاتف أو واتساب</p>
+        </div>
+        <div class="pp-benefit">
+          <span class="pp-benefit-icon">⭐</span>
+          <h4>ضمان الرضا التام</h4>
+          <p>إرجاع مجاني خلال 14 يوم بدون أي شروط — رضاكِ هو أولويتنا القصوى</p>
+        </div>
+      </div>
+
+      <!-- COMPARISON SECTION -->
+      <h2 class="pp-section-title" style="margin-top: 60px;">الفارق الحقيقي: <em>لماذا لمسة بيوتي؟</em></h2>
+      <p class="pp-section-sub">مقارنة بسيطة توضح الفارق بين مستحضراتنا الطبيعية والمنتجات التجارية الرخيصة</p>
+      
+      <div style="max-width: 800px; margin: 40px auto 60px; border: 1.5px solid var(--line); overflow: hidden; background: rgba(255,255,255,0.4); backdrop-filter: blur(8px);">
+        <!-- Table Header -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1.5px solid var(--line); font-weight: 700; text-align: center; background: rgba(184,134,58,0.06);">
+          <div style="padding: 16px; border-left: 1.5px solid var(--line); color: var(--ivory);">الميزة</div>
+          <div style="padding: 16px; border-left: 1.5px solid var(--line); color: var(--gold-deep);">✨ مستحضرات لمسة بيوتي الفاخرة</div>
+          <div style="padding: 16px; color: var(--grey);">المنتجات التجارية الرخيصة</div>
+        </div>
+        <!-- Row 1 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--line); text-align: center; font-size: 0.88rem; align-items: center;">
+          <div style="padding: 16px; border-left: 1px solid var(--line); font-weight: 600; color: var(--ivory);">نوعية المكونات</div>
+          <div style="padding: 16px; border-left: 1px solid var(--line); color: #4caf50; background: rgba(76,175,80,0.03);">مستخلصات نباتية وزيوت عضوية نقية 100%</div>
+          <div style="padding: 16px; color: #e53935; background: rgba(229,57,53,0.03);">مواد كيميائية رخيصة ومواد حافظة ضارة</div>
+        </div>
+        <!-- Row 2 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--line); text-align: center; font-size: 0.88rem; align-items: center;">
+          <div style="padding: 16px; border-left: 1px solid var(--line); font-weight: 600; color: var(--ivory);">أمان الاستخدام</div>
+          <div style="padding: 16px; border-left: 1px solid var(--line); color: #4caf50; background: rgba(76,175,80,0.03);">خالٍ تماماً من البارابين والعطور الاصطناعية المسببة للحساسية</div>
+          <div style="padding: 16px; color: #e53935; background: rgba(229,57,53,0.03);">يحتوي على مواد بتروكيميائية تسبب انسداد المسام</div>
+        </div>
+        <!-- Row 3 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; border-bottom: 1px solid var(--line); text-align: center; font-size: 0.88rem; align-items: center;">
+          <div style="padding: 16px; border-left: 1px solid var(--line); font-weight: 600; color: var(--ivory);">تأثير المنتج</div>
+          <div style="padding: 16px; border-left: 1px solid var(--line); color: #4caf50; background: rgba(76,175,80,0.03);">نتائج حقيقية تغذي البشرة وتعيد حيويتها ونضارتها</div>
+          <div style="padding: 16px; color: #e53935; background: rgba(229,57,53,0.03);">مفعول مؤقت ومزيف يزول فور الغسل</div>
+        </div>
+        <!-- Row 4 -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; font-size: 0.88rem; align-items: center;">
+          <div style="padding: 16px; border-left: 1px solid var(--line); font-weight: 600; color: var(--ivory);">الضمان والثقة</div>
+          <div style="padding: 16px; border-left: 1px solid var(--line); color: #4caf50; background: rgba(76,175,80,0.03);">معاينة وتجريب القطعة قبل الدفع مع إرجاع 14 يوم</div>
+          <div style="padding: 16px; color: #e53935; background: rgba(229,57,53,0.03);">معاينة المنتج وتجربته عند الاستلام مع إرجاع 14 يوم</div>
+        </div>
+      </div>
+
+      <!-- Customer Reviews Section -->
+      <h2 class="pp-section-title">ماذا قالت <em>عميلاتنا</em></h2>
+      <p class="pp-section-sub">أكثر من 4500 عميلة شاركن تجربتهن مع لمسة بيوتي</p>
+
+      <div class="pp-reviews-grid" id="ppReviewsGrid">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Stats Bar -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:60px;text-align:center;border:1px solid var(--line);padding:30px;background:rgba(255,255,255,0.4);">
+        <div>
+          <div style="font-family:'Cairo',sans-serif;font-size:2.5rem;color:var(--gold);">+12</div>
+          <div style="font-size:0.78rem;color:var(--grey);letter-spacing:1px;">سنة خبرة</div>
+        </div>
+        <div>
+          <div style="font-family:'Cairo',sans-serif;font-size:2.5rem;color:var(--gold);">+4500</div>
+          <div style="font-size:0.78rem;color:var(--grey);letter-spacing:1px;">عميلة سعيدة</div>
+        </div>
+        <div>
+          <div style="font-family:'Cairo',sans-serif;font-size:2.5rem;color:var(--gold);">58</div>
+          <div style="font-size:0.78rem;color:var(--grey);letter-spacing:1px;">ولاية تغطيها</div>
+        </div>
+        <div>
+          <div style="font-family:'Cairo',sans-serif;font-size:2.5rem;color:var(--gold);">★4.9</div>
+          <div style="font-size:0.78rem;color:var(--grey);letter-spacing:1px;">تقييم متوسط</div>
+        </div>
+      </div>
+
+      <!-- Final CTA Repeat -->
+      <div style="background:linear-gradient(135deg,#2b2418,#3a3020);padding:50px;text-align:center;position:relative;overflow:hidden;margin-bottom:40px;">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(201,162,75,0.04) 0 10px,transparent 10px 20px);"></div>
+        <div style="position:relative;">
+          <div style="font-size:0.72rem;letter-spacing:4px;color:var(--gold);margin-bottom:16px;text-transform:uppercase;">لا تنتظري أكثر</div>
+          <h2 style="font-family:'Cairo',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);color:var(--noir);margin-bottom:16px;">
+            مستحضراتكِ الفاخرة تنتظركِ 👑
+          </h2>
+          <p style="color:rgba(251,247,239,0.7);font-size:0.9rem;margin-bottom:30px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.8;">
+            كل لحظة تنتظرين، نضارة بشرتكِ تنتظركِ — اطلبي الآن والدفع عند الاستلام
+          </p>
+          <button onclick="document.getElementById('ppOrderForm').scrollIntoView({behavior:'smooth'})" 
+            style="background:var(--gold);color:var(--ivory);border:none;padding:16px 48px;font-family:'Cairo',sans-serif;font-size:1.1rem;cursor:pointer;letter-spacing:2px;transition:all 0.3s;"
+            onmouseover="this.style.background='#9c7530'" onmouseout="this.style.background='var(--gold)'">
+            🛍️ اطلبي الآن — الدفع عند الاستلام
+          </button>
+        </div>
+      </div>
+
+    </div>
+    <!-- End pp-body -->
+
+    <!-- Simple Footer inside product page -->
+    <div style="border-top:1px solid var(--line);padding:30px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+      <div class="logo">زاڤيرا <span style="color:var(--gold);">ك</span></div>
+      <div style="font-size:0.78rem;color:var(--grey);">© 2026 LAMSA BEAUTY — جميع الحقوق محفوظة</div>
+      <div style="display:flex;gap:16px;font-size:0.78rem;color:var(--grey);">
+        <span>📞 الدفع عند الاستلام</span>
+        <span>🚚 توصيل لجميع الولايات</span>
+        <span>↩️ إرجاع 14 يوم</span>
+      </div>
+    </div>
+
+  </div>
+  <!-- End pp-inner -->
+</div>
+<!-- End Product Page -->
+
+<!-- Product Page Success Overlay -->
+<div class="pp-success" id="ppSuccess">
+  <div class="pp-success-box">
+    <div class="pp-success-icon">🎉</div>
+    <h3>تهانيكِ! طلبكِ المميّز في طريقه إليكِ</h3>
+    <p>تم تسجيل طلبكِ بنجاح تحت الرقم:</p>
+    <div class="pp-success-order" id="ppSuccessOrderId">#LB-0000</div>
+    <p>سيتصل بكِ فريق لمسة بيوتي خلال <strong style="color:var(--gold);">ساعات قليلة</strong> لتأكيد طلبكِ وترتيب الشحن.</p>
+    <p style="font-size:0.82rem;color:var(--grey);margin-top:10px;">أضيفي رقمنا: <strong style="color:var(--ivory);">0550 XXX XXX</strong> لتلقي التحديثات</p>
+    
+    <div id="ppSuccessDigitalDelivery" style="display:none; background:rgba(212,175,55,0.1); border:1px dashed #d4af37; padding:15px; border-radius:8px; margin:15px 0; color:#fff; text-align:center;">
+      <div style="font-weight:700; color:#d4af37; margin-bottom:6px;">🔑 كود تسليم المنتج الرقمي:</div>
+      <div id="ppSuccessDigitalCode" style="font-family:monospace; font-size:1.1rem; letter-spacing:1px; background:#111; padding:8px; border-radius:4px; border:1px solid #333; display:inline-block;"></div>
+    </div>
+    
+    <div class="pp-success-invoice" id="ppSuccessInvoice"></div>
+    <button class="pp-success-close" id="ppSuccessCloseBtn">✓ متابعة التسوق</button>
+  </div>
+</div>
+
+<!-- LIVE SOCIAL PROOF POPUP -->
+<div class="live-alert-popup" id="liveAlertPopup">
+  <div class="live-alert-avatar" id="liveAlertAvatar">👑</div>
+  <div class="live-alert-body">
+    <span id="liveAlertText">قامت إحدى العميلات بشراء مستحضر تجميل الآن!</span>
+    <span class="live-alert-time" id="liveAlertTime">منذ دقيقة</span>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>
 </html>
+
