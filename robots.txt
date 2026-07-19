@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-# Sitemap Location
-Sitemap: https://pipounostra1.github.io/zaphera-coftan-pro/sitemap.xml
+# Sitemap Location (Replace with your actual domain when deployed)
+Sitemap: https://username.github.io/souqok-online/sitemap.xml
