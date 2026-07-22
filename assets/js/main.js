@@ -4,7 +4,7 @@
 
 const CONFIG = {
   // رقم الواتساب الخاص بك (مفتاح الدولة الجزائر +213 متبوعاً بالرقم دون الصفر الأول)
-  whatsappNumber: '213550000000',
+  whatsappNumber: '213669070092',
   consultationMessage: 'مرحباً سوقك أونلاين، أود الحصول على استشارة مجانية بخصوص تصميم متجر إلكتروني لمشروعي.',
   generalContactMessage: 'مرحباً سوقك أونلاين، أود الاستفسار عن خدمات تصميم المتاجر الإلكترونية والصفحات الفاخرة.',
   metaPixelId: ''
@@ -29,7 +29,6 @@ if (CONFIG.metaPixelId && CONFIG.metaPixelId.trim() !== '') {
 function trackMarketingEvent(eventName, eventData = {}) {
   if (typeof fbq === 'function') {
     fbq('track', eventName, eventData);
-    console.log(`[Meta Pixel] Event tracked: ${eventName}`, eventData);
   }
 }
 
