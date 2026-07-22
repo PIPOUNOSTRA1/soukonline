@@ -2068,6 +2068,73 @@ footer {
   font-weight: 500;
 }
 
+/* ===== BEHANCE TRIPLE PHONE SHOWCASE ===== */
+.behance-phones-trio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.behance-phone-card {
+  width: 250px;
+  height: 500px;
+  border-radius: 38px;
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  background: #030008;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(168, 85, 247, 0.15);
+  position: relative;
+  transition: transform 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium);
+}
+
+.behance-phone-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  border-color: rgba(168, 85, 247, 0.5);
+}
+
+.behance-phone-screen {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  transition: background-position 10s ease;
+}
+
+.behance-phone-card:hover .behance-phone-screen {
+  background-position: bottom center;
+}
+
+.behance-phone-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(3, 0, 8, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+  .behance-phones-trio {
+    gap: 16px;
+  }
+  .behance-phone-card {
+    width: 100%;
+    max-width: 290px;
+    height: 460px;
+  }
+}
+
 /* Next Case Study Trigger block at bottom */
 .next-case-trigger {
   padding: 120px 0;
