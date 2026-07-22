@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 
 <!-- Custom Stylesheet -->
-<link rel="stylesheet" href="assets/css/style.css?v=1.0.3">
+<link rel="stylesheet" href="assets/css/style.css?v=1.0.4">
 
 <!-- Structured Schema Markup (JSON-LD) for SEO -->
 <script type="application/ld+json">
@@ -279,86 +279,177 @@
   </div>
 </section>
 
-<!-- PORTFOLIO SECTION -->
+<!-- PORTFOLIO SECTION (BEHANCE SHOWCASE STYLE) -->
 <section class="section" id="work">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="tag">معرض الأعمال</span>
-      <h2>مشاريع صممناها.. من المشكلة إلى النتائج بالأرقام</h2>
-      <p>نحن لا نصمم مجرد واجهات؛ نحن نبني أصولاً تجارية تحل عقبات التشغيل وتجلب مبيعات ملموسة للبراندات. انقر فوق أي مشروع لاستعراض تفاصيل دراسة الحالة الكاملة:</p>
+      <span class="tag">معرض الأعمال الاحترافي</span>
+      <h2>مشاريع صممناها.. عروض سينمائية ونتائج ملموسة بالأرقام</h2>
+      <p>عروض بتصاميم وتجارب مستوحاة من منصة Behance العالمية تجمع بين الفخامة البصرية والأداء المبيعي الفائق. انقر فوق أي مشروع لمعاينة دراسة الحالة الكبيرة:</p>
+    </div>
+
+    <!-- BEHANCE CATEGORY FILTER TABS -->
+    <div class="behance-filter-bar reveal">
+      <button class="behance-tab active" data-filter="all">🌟 جميع المشاريع</button>
+      <button class="behance-tab" data-filter="fashion">👗 أزياء وملابس</button>
+      <button class="behance-tab" data-filter="cosmetics">💄 عناية وتجميل</button>
+      <button class="behance-tab" data-filter="electronics">⚡ إلكترونيات</button>
+      <button class="behance-tab" data-filter="luxury">💎 فخامة وديكور</button>
     </div>
 
     <div class="portfolio-grid">
       <!-- Item 1: Skincare -->
-      <div class="p-card reveal" data-open-case="case-skincare">
-        <div class="p-thumb h"></div>
+      <div class="p-card reveal" data-open-case="case-skincare" data-category="cosmetics">
+        <div class="p-thumb h">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">DTC Cosmetics · تجميل وعناية</span>
-          <h4>صفحة هبوط مستحضرات التجميل الفاخرة (Premium Skincare)</h4>
-          <p>صفحة مبيعات مصممة خصيصاً لإبراز مكونات وجودة المنتج مع فورم طلب سريع يزيد من ثقة المشتري الجزائري.</p>
+          <div>
+            <span class="k">DTC Cosmetics · تجميل وعناية</span>
+            <h4>صفحة هبوط مستحضرات التجميل الفاخرة (Premium Skincare)</h4>
+            <p>صفحة مبيعات مصممة خصيصاً لإبراز مكونات وجودة المنتج مع فورم طلب سريع يزيد من ثقة المشتري الجزائري.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">🚀 +190% مبيعات</span>
+            <span class="p-metric">⚡ 0.6s سرعة 4G</span>
+            <span class="p-metric">📦 58 ولاية</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 2: Fashion -->
-      <div class="p-card reveal" data-open-case="case-fashion">
-        <div class="p-thumb f"></div>
+      <div class="p-card reveal" data-open-case="case-fashion" data-category="fashion">
+        <div class="p-thumb f">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">DTC Fashion · ملابس وأزياء</span>
-          <h4>متجر الملابس والأزياء العصرية (Summer Outfitters)</h4>
-          <p>متجر ملابس إلكتروني متكامل بتجربة تصفح انسيابية ترفع المبيعات على الموبايل وتقلل خطوات سلة التسوق.</p>
+          <div>
+            <span class="k">DTC Fashion · ملابس وأزياء</span>
+            <h4>متجر الملابس والأزياء العصرية (Summer Outfitters)</h4>
+            <p>متجر ملابس إلكتروني متكامل بتجربة تصفح انسيابية ترفع المبيعات على الموبايل وتقلل خطوات سلة التسوق.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">📈 +310% تحويل</span>
+            <span class="p-metric">🛍️ سلة تسوق ذكية</span>
+            <span class="p-metric">0% عمولة</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 3: 3D interactive -->
-      <div class="p-card reveal" data-open-case="case-lusion">
-        <div class="p-thumb c"></div>
+      <div class="p-card reveal" data-open-case="case-lusion" data-category="luxury">
+        <div class="p-thumb c">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">Interactive 3D · تجارب تفاعلية</span>
-          <h4>موقع تفاعلي لعرض الخدمات الرقمية (Lusion Realtime)</h4>
-          <p>تطوير واجهة ويب تفاعلية ثلاثية الأبعاد بالكامل تزيد من تفاعل الزوار وبناء هيبة البراند وجذب كبار العملاء.</p>
+          <div>
+            <span class="k">Interactive 3D · تجارب تفاعلية</span>
+            <h4>موقع تفاعلي لعرض الخدمات الرقمية (Lusion Realtime)</h4>
+            <p>تطوير واجهة ويب تفاعلية ثلاثية الأبعاد بالكامل تزيد من تفاعل الزوار وبناء هيبة البراند وجذب كبار العملاء.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">🔮 3D Realtime</span>
+            <span class="p-metric">💎 هيبة رقمية</span>
+            <span class="p-metric">⚡ 60FPS</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 4: Cartier Showcase -->
-      <div class="p-card reveal" data-open-case="case-cartier">
-        <div class="p-thumb e"></div>
+      <div class="p-card reveal" data-open-case="case-cartier" data-category="luxury">
+        <div class="p-thumb e">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">Luxury Showcase · السرد الفاخر</span>
-          <h4>موقع السرد القصصي لعلامة الساعات (Cartier Showcase)</h4>
-          <p>تصميم بمظهر داكن وتأثيرات بصرية راقية لعرض تاريخ الساعات وتفاصيلها النادرة بأسلوب سرد سينمائي فاخر.</p>
+          <div>
+            <span class="k">Luxury Showcase · السرد الفاخر</span>
+            <h4>موقع السرد القصصي لعلامة الساعات (Cartier Showcase)</h4>
+            <p>تصميم بمظهر داكن وتأثيرات بصرية راقية لعرض تاريخ الساعات وتفاصيلها النادرة بأسلوب سرد سينمائي فاخر.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">👑 فخامة استثنائية</span>
+            <span class="p-metric">🎬 سرد سينمائي</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 5: Grocery -->
-      <div class="p-card reveal" data-open-case="case-grocery">
-        <div class="p-thumb b"></div>
+      <div class="p-card reveal" data-open-case="case-grocery" data-category="electronics">
+        <div class="p-thumb b">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">DTC Grocery · أغذية وتوصيل</span>
-          <h4>منصة تسوق الأغذية العضوية الطازجة (Fresh Market)</h4>
-          <p>تصميم سريع وواجهات واضحة لتسهيل عملية الشراء لجميع الفئات السنية وتأكيد فوري لطلبات التوصيل للمنازل.</p>
+          <div>
+            <span class="k">DTC Grocery · أغذية وتوصيل</span>
+            <h4>منصة تسوق الأغذية العضوية الطازجة (Fresh Market)</h4>
+            <p>تصميم سريع وواجهات واضحة لتسهيل عملية الشراء لجميع الفئات السنية وتأكيد فوري لطلبات التوصيل للمنازل.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">🥑 طلب سريع</span>
+            <span class="p-metric">⚡ 0.5s سرعة</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 6: Electronics -->
-      <div class="p-card reveal" data-open-case="case-electronics">
-        <div class="p-thumb d"></div>
+      <div class="p-card reveal" data-open-case="case-electronics" data-category="electronics">
+        <div class="p-thumb d">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">DTC Electronics · إلكترونيات</span>
-          <h4>متجر الإلكترونيات والأجهزة المنزلية (Electro DZ)</h4>
-          <p>تصميم يسهل مقارنة الخصائص التقنية والقطع وتوفير تجربة تصفح منظمة تزيد من قيمة متوسط السلة.</p>
+          <div>
+            <span class="k">DTC Electronics · إلكترونيات</span>
+            <h4>متجر الإلكترونيات والأجهزة المنزلية (Electro DZ)</h4>
+            <p>تصميم يسهل مقارنة الخصائص التقنية والقطع وتوفير تجربة تصفح منظمة تزيد من قيمة متوسط السلة.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">🔌 مقارنة الأجهزة</span>
+            <span class="p-metric">📈 +240% مبيعات</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 7: Furniture -->
-      <div class="p-card reveal" data-open-case="case-furniture">
-        <div class="p-thumb g"></div>
+      <div class="p-card reveal" data-open-case="case-furniture" data-category="luxury">
+        <div class="p-thumb g">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">DTC Furniture · أثاث وديكور</span>
-          <h4>معرض الأثاث والديكور المنزلي الفاخر (Modern Living)</h4>
-          <p>واجهات مريحة تركز على عرض تفاصيل القطع والأبعاد ومساعدة المشتري على تخيل المنتجات في منزله.</p>
+          <div>
+            <span class="k">DTC Furniture · أثاث وديكور</span>
+            <h4>معرض الأثاث والديكور المنزلي الفاخر (Modern Living)</h4>
+            <p>واجهات مريحة تركز على عرض تفاصيل القطع والأبعاد ومساعدة المشتري على تخيل المنتجات في منزله.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">🛋️ ديكور 3D</span>
+            <span class="p-metric">📦 توصيل للمنزل</span>
+          </div>
         </div>
       </div>
+
       <!-- Item 8: Baby -->
-      <div class="p-card reveal" data-open-case="case-baby">
-        <div class="p-thumb a"></div>
+      <div class="p-card reveal" data-open-case="case-baby" data-category="cosmetics">
+        <div class="p-thumb a">
+          <span class="behance-featured-badge">✦ BEHANCE FEATURED</span>
+          <div class="p-hover-overlay"><span>استعراض دراسة الحالة ↗</span></div>
+        </div>
         <div class="p-body">
-          <span class="k">DTC Baby · منتجات أطفال</span>
-          <h4>متجر ألعاب ومنتجات الأطفال الصحية (Little Angels)</h4>
-          <p>تصميم يبرز درجات الأمان والسلامة للمواد مع إشعارات ذكية لبناء ثقة الأمهات والآباء وزيادة المبيعات.</p>
+          <div>
+            <span class="k">DTC Baby · منتجات أطفال</span>
+            <h4>متجر ألعاب ومنتجات الأطفال الصحية (Little Angels)</h4>
+            <p>تصميم يبرز درجات الأمان والسلامة للمواد مع إشعارات ذكية لبناء ثقة الأمهات والآباء وزيادة المبيعات.</p>
+          </div>
+          <div class="p-metrics-row">
+            <span class="p-metric">👶 ثقة الأمهات</span>
+            <span class="p-metric">⚡ 0.4s سرعة</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1316,7 +1407,7 @@
   <span class="whatsapp-float-text">تواصل معنا واتساب</span>
 </a>
 
-<script src="assets/js/main.js?v=1.0.3"></script>
+<script src="assets/js/main.js?v=1.0.4"></script>
 
 </body>
 </html>

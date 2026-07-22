@@ -519,5 +519,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 3. BEHANCE CATEGORY FILTER TABS LOGIC
+  const behanceTabs = document.querySelectorAll('.behance-tab');
+  const portfolioCards = document.querySelectorAll('.portfolio-grid .p-card');
+  
+  if (behanceTabs.length > 0 && portfolioCards.length > 0) {
+    behanceTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        behanceTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        
+        const filter = tab.getAttribute('data-filter');
+        portfolioCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0) scale(1)';
+            }, 50);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  }
+
   counters.forEach(c => countersObserver.observe(c));
 });

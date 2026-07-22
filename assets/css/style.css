@@ -1100,34 +1100,69 @@ header.scrolled {
   line-height: 1.7;
 }
 
-/* ===== PORTFOLIO GRID ===== */
+/* ===== BEHANCE SHOWCASE PORTFOLIO ===== */
+.behance-filter-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  margin-bottom: 40px;
+}
+
+.behance-tab {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-dim);
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-premium);
+  backdrop-filter: blur(8px);
+}
+
+.behance-tab:hover,
+.behance-tab.active {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(219, 39, 119, 0.15));
+  border-color: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.3);
+  transform: translateY(-2px);
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-top: 40px;
+  gap: 36px;
 }
 
 @media (max-width: 900px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 }
 
 .p-card {
   border: 1px solid var(--glass-border);
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
-  background: var(--glass);
-  backdrop-filter: blur(10px);
-  transition: transform 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium);
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(12px);
+  transition: transform 0.4s var(--ease-premium), border-color 0.4s var(--ease-premium), box-shadow 0.4s var(--ease-premium), opacity 0.3s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
+  cursor: pointer;
 }
 
 .p-card:hover {
-  border-color: rgba(168, 85, 247, 0.4);
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(168, 85, 247, 0.45);
+  box-shadow: 0 20px 45px rgba(168, 85, 247, 0.22);
 }
 
 /* Preview Image in grid card wrapper */
@@ -1142,15 +1177,74 @@ header.scrolled {
 }
 
 .p-card:hover .p-thumb {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .p-thumb::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(3, 0, 8, 0.8) 100%);
+  background: linear-gradient(180deg, rgba(3, 0, 8, 0.2) 0%, rgba(3, 0, 8, 0.85) 100%);
   pointer-events: none;
+}
+
+.behance-featured-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 10;
+  background: rgba(3, 0, 8, 0.75);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: #e9d5ff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.behance-featured-badge i {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.p-hover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  background: rgba(3, 0, 8, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-premium);
+}
+
+.p-card:hover .p-hover-overlay {
+  opacity: 1;
+}
+
+.p-hover-overlay span {
+  background: linear-gradient(135deg, var(--accent), #db2777);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5);
+  transform: translateY(10px);
+  transition: transform 0.35s var(--ease-premium);
+}
+
+.p-card:hover .p-hover-overlay span {
+  transform: translateY(0);
 }
 
 .p-thumb.a { background-image: url('../images/portfolio/ecommerce_stores.png'); }
@@ -1163,11 +1257,12 @@ header.scrolled {
 .p-thumb.h { background-image: url('../images/portfolio/perfume.png'); }
 
 .p-body {
-  padding: 30px;
+  padding: 28px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .p-body .k {
@@ -1175,13 +1270,13 @@ header.scrolled {
   font-size: 0.76rem;
   font-weight: 600;
   color: #c084fc;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   display: block;
   text-transform: uppercase;
 }
 
 .p-body h4 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #fff;
   margin-bottom: 10px;
@@ -1189,9 +1284,27 @@ header.scrolled {
 }
 
 .p-body p {
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   color: var(--text-dim);
-  line-height: 1.6;
+  line-height: 1.65;
+}
+
+.p-metrics-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.p-metric {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5px 12px;
+  border-radius: 8px;
 }
 
 /* ===== TESTIMONIALS ===== */
