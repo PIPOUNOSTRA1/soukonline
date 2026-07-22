@@ -1255,6 +1255,7 @@ header.scrolled {
 .p-thumb.f { background-image: url('../images/portfolio/fashion.png'); }
 .p-thumb.g { background-image: url('../images/portfolio/furniture.png'); }
 .p-thumb.h { background-image: url('../images/portfolio/perfume.png'); }
+.p-thumb.aurelia { background-image: url('../images/portfolio/aurelia.png'); }
 
 .p-body {
   padding: 28px;
