@@ -2613,3 +2613,391 @@ footer {
   }
 }
 
+
+
+
+/* ====================================================
+   BEHANCE ASYMMETRIC / EDITORIAL GRID & FULL VIEWPORT
+   ==================================================== */
+.behance-asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 340px;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.behance-grid-item {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #090611;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  outline: none;
+}
+
+.behance-grid-item:focus-visible {
+  border-color: var(--accent-light);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.5);
+}
+
+.behance-grid-item.grid-featured-big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.behance-grid-item.grid-featured-wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.behance-grid-item.grid-featured-tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.behance-grid-item.grid-standard {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Cover Image filling 100% without white padding */
+.behance-grid-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.behance-grid-item:hover .behance-grid-cover {
+  transform: scale(1.05);
+}
+
+/* Gradient Overlay */
+.behance-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(3, 0, 8, 0.85) 65%, rgba(3, 0, 8, 0.98) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  opacity: 0.88;
+  transition: opacity 0.4s var(--ease-premium), background 0.4s var(--ease-premium);
+}
+
+.behance-grid-item:hover .behance-grid-overlay {
+  opacity: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(3, 0, 8, 0.92) 55%, rgba(3, 0, 8, 0.99) 100%);
+}
+
+.behance-grid-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.behance-grid-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.behance-grid-metric-chip {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.15);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+  padding: 6px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.15);
+}
+
+.behance-grid-bottom {
+  transform: translateY(6px);
+  transition: transform 0.4s var(--ease-premium);
+}
+
+.behance-grid-item:hover .behance-grid-bottom {
+  transform: translateY(0);
+}
+
+.behance-grid-category {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.behance-grid-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.behance-grid-item.grid-featured-big .behance-grid-title {
+  font-size: 1.95rem;
+}
+
+.behance-grid-link-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.behance-grid-item:hover .behance-grid-link-action {
+  opacity: 1;
+  color: var(--accent-light);
+  transform: translateX(-6px);
+}
+
+/* ====================================================
+   FULL VIEWPORT CASE STUDY VIEW
+   ==================================================== */
+.case-study-fullscreen-view {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: #05020a;
+  color: var(--text-light);
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.97);
+  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.4s;
+}
+
+.case-study-fullscreen-view.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.case-view-sticky-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(5, 2, 10, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.case-view-back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.case-view-back-btn:hover {
+  background: var(--accent-light);
+  color: #000;
+  transform: translateX(4px);
+}
+
+.case-view-bar-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.case-view-body {
+  padding-bottom: 120px;
+}
+
+.case-hero-full-bleed {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 5%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.case-hero-full-bleed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 2, 10, 0.3) 0%, rgba(5, 2, 10, 0.85) 60%, rgba(5, 2, 10, 1) 100%);
+}
+
+.case-hero-content-inner {
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+}
+
+.case-giant-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.case-giant-tagline {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 24px;
+}
+
+.case-metrics-hero-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.big-metric-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 30px 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.big-metric-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.big-metric-lbl {
+  font-size: 0.98rem;
+  color: var(--text-dim);
+  font-weight: 700;
+}
+
+.behance-fullbleed-showcase {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.behance-fullbleed-frame {
+  width: 100%;
+  height: 680px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  position: relative;
+  background: #030008;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.behance-fullbleed-scroll {
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-position 12s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.behance-fullbleed-frame:hover .behance-fullbleed-scroll {
+  background-position: bottom center;
+}
+
+@media (max-width: 850px) {
+  .behance-asymmetric-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 280px;
+    gap: 16px;
+  }
+  .behance-grid-item.grid-featured-big,
+  .behance-grid-item.grid-featured-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .behance-grid-item.grid-featured-tall {
+    grid-row: span 1;
+  }
+  .behance-fullbleed-frame {
+    height: 480px;
+  }
+  .behance-fullbleed-scroll {
+    overflow-y: auto;
+    background-size: 100% auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .behance-asymmetric-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+  }
+  .behance-grid-item.grid-featured-big,
+  .behance-grid-item.grid-featured-wide,
+  .behance-grid-item.grid-featured-tall,
+  .behance-grid-item.grid-standard {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .case-giant-title {
+    font-size: 2.1rem;
+  }
+  .big-metric-num {
+    font-size: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .behance-grid-cover,
+  .behance-grid-item,
+  .behance-grid-overlay,
+  .case-study-fullscreen-view,
+  .behance-fullbleed-scroll {
+    transition: none !important;
+    transform: none !important;
+  }
+}
