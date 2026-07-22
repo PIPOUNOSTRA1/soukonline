@@ -574,6 +574,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 3. Zaphera Coftan Pro Store Simulator
+  const zapheraBtns = document.querySelectorAll('.sim-zaphera-grid-btn');
+  const zapheraCheckout = document.getElementById('sim-zaphera-checkout');
+  const zapheraSelectedItem = document.getElementById('sim-zaphera-selected-item');
+  const zapheraSelectedPrice = document.getElementById('sim-zaphera-selected-price');
+  const zapheraCartCount = document.getElementById('sim-zaphera-cart-count');
+  const zapheraScroll = document.getElementById('sim-zaphera-scroll');
+  const zapheraForm = document.getElementById('sim-zaphera-form');
+  const zapheraSuccess = document.getElementById('sim-zaphera-success');
+  const zapheraCloseSuccess = document.getElementById('sim-zaphera-close-success');
+
+  if (zapheraBtns.length > 0 && zapheraCheckout && zapheraSelectedItem && zapheraSelectedPrice && zapheraCartCount && zapheraScroll) {
+    zapheraBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const item = btn.getAttribute('data-item');
+        const price = btn.getAttribute('data-price');
+
+        zapheraSelectedItem.textContent = item;
+        zapheraSelectedPrice.textContent = parseInt(price, 10).toLocaleString('ar-DZ') + ' دج';
+        zapheraCartCount.textContent = '1';
+
+        zapheraCheckout.style.display = 'block';
+
+        setTimeout(() => {
+          zapheraScroll.scrollTo({
+            top: zapheraCheckout.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }, 100);
+      });
+    });
+  }
+
+  if (zapheraForm && zapheraSuccess && zapheraScroll) {
+    zapheraForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      zapheraScroll.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        zapheraSuccess.classList.add('show');
+      }, 400);
+    });
+  }
+
+  if (zapheraCloseSuccess && zapheraSuccess && zapheraForm && zapheraCheckout && zapheraCartCount) {
+    zapheraCloseSuccess.addEventListener('click', (e) => {
+      e.preventDefault();
+      zapheraSuccess.classList.remove('show');
+      zapheraCheckout.style.display = 'none';
+      zapheraForm.reset();
+      zapheraCartCount.textContent = '0';
+    });
+  }
+
   // 4. BEHANCE CATEGORY FILTER TABS LOGIC
   const behanceTabs = document.querySelectorAll('.behance-tab');
   const portfolioCards = document.querySelectorAll('.portfolio-grid .p-card');
