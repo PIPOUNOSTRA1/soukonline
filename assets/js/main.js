@@ -295,26 +295,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. WHATSAPP CTA DYNAMIC SETUP
   const whatsappNumber = CONFIG.whatsappNumber.replace(/[^0-9]/g, '');
   
-  // Setup links for header CTAs and pricing cards dynamically
-  document.querySelectorAll('a[href="#contact"]').forEach(link => {
-    // If it's inside the contact footer, we don't change it to wa.me directly
-    if (link.closest('#contact') || link.closest('footer')) return;
-    
-    // Add WhatsApp click redirection to pricing card buttons
+  // Pricing cards WhatsApp redirection
+  document.querySelectorAll('.pricing-card a').forEach(link => {
     link.addEventListener('click', (e) => {
-      if (link.classList.contains('btn-primary') || link.classList.contains('btn-secondary')) {
-        e.preventDefault();
-        const packageName = link.closest('.pricing-card')?.querySelector('.pricing-title')?.textContent || 'استفسار';
-        const customMsg = `مرحباً سوقك أونلاين، أود الاستفسار بخصوص باقة: (${packageName}) والمتابعة معكم لتصميم مشروعي.`;
-        const encodedMsg = encodeURIComponent(customMsg);
-        
-        trackMarketingEvent('Lead', { content_name: packageName });
-        window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
-      }
+      e.preventDefault();
+      const packageName = link.closest('.pricing-card')?.querySelector('.pricing-title')?.textContent || 'استفسار';
+      const customMsg = `مرحباً سوقك أونلاين، أود الاستفسار بخصوص باقة: (${packageName}) والمتابعة معكم لتصميم مشروعي.`;
+      const encodedMsg = encodeURIComponent(customMsg);
+      
+      trackMarketingEvent('Lead', { content_name: packageName });
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
     });
   });
 
-  // Direct WhatsApp general buttons
+  // Direct WhatsApp general buttons (including floating widget)
   document.querySelectorAll('.whatsapp-btn').forEach(btn => {
     const encodedMsg = encodeURIComponent(CONFIG.generalContactMessage);
     btn.setAttribute('href', `https://wa.me/${whatsappNumber}?text=${encodedMsg}`);
@@ -343,6 +337,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const encodedMsg = encodeURIComponent(CONFIG.generalContactMessage);
     headerCtaBtn.setAttribute('href', `https://wa.me/${whatsappNumber}?text=${encodedMsg}`);
     headerCtaBtn.setAttribute('target', '_blank');
+    
+    headerCtaBtn.addEventListener('click', () => {
+      trackMarketingEvent('Contact', { method: 'Header CTA' });
+    });
   }
 
   // Hero Primary CTA Button
