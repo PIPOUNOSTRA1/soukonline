@@ -35,7 +35,7 @@ function trackMarketingEvent(eventName, eventData = {}) {
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
 
-  // 1. PRELOADER PERCENTAGE COUNTER
+  // 1. PRELOADER PERCENTAGE COUNTER (OPTIMIZED ULTRA FAST)
   const preloader = document.getElementById('preloader');
   const progressPercent = document.getElementById('progressPercent');
   const progressBar = document.getElementById('progressBar');
@@ -43,21 +43,17 @@ document.addEventListener('DOMContentLoaded', () => {
   if (preloader && progressPercent && progressBar) {
     let count = 0;
     const interval = setInterval(() => {
-      count += Math.floor(Math.random() * 8) + 2;
+      count += Math.floor(Math.random() * 25) + 15;
       if (count >= 100) {
         count = 100;
         clearInterval(interval);
-        setTimeout(() => {
-          preloader.classList.add('loaded');
-          // Trigger animations in viewport
-          setTimeout(initScrollAnimations, 400);
-        }, 300);
+        preloader.classList.add('loaded');
+        initScrollAnimations();
       }
       progressPercent.textContent = count;
       progressBar.style.width = count + '%';
-    }, 45);
+    }, 12);
   } else {
-    // If elements not found, trigger scroll animations directly
     initScrollAnimations();
   }
 
