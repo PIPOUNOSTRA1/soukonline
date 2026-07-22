@@ -519,7 +519,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. BEHANCE CATEGORY FILTER TABS LOGIC
+  // 3. Aurelia Shopify Store Simulator
+  const aureliaBtns = document.querySelectorAll('.sim-aurelia-grid-btn');
+  const aureliaCheckout = document.getElementById('sim-aurelia-checkout');
+  const aureliaSelectedItem = document.getElementById('sim-aurelia-selected-item');
+  const aureliaSelectedPrice = document.getElementById('sim-aurelia-selected-price');
+  const aureliaCartCount = document.getElementById('sim-aurelia-cart-count');
+  const aureliaScroll = document.getElementById('sim-aurelia-scroll');
+  const aureliaForm = document.getElementById('sim-aurelia-form');
+  const aureliaSuccess = document.getElementById('sim-aurelia-success');
+  const aureliaCloseSuccess = document.getElementById('sim-aurelia-close-success');
+
+  if (aureliaBtns.length > 0 && aureliaCheckout && aureliaSelectedItem && aureliaSelectedPrice && aureliaCartCount && aureliaScroll) {
+    aureliaBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const item = btn.getAttribute('data-item');
+        const price = btn.getAttribute('data-price');
+
+        aureliaSelectedItem.textContent = item;
+        aureliaSelectedPrice.textContent = parseInt(price, 10).toLocaleString('ar-DZ') + ' دج';
+        aureliaCartCount.textContent = '1';
+
+        aureliaCheckout.style.display = 'block';
+
+        // Smooth scroll to checkout inside mockup
+        setTimeout(() => {
+          aureliaScroll.scrollTo({
+            top: aureliaCheckout.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }, 100);
+      });
+    });
+  }
+
+  if (aureliaForm && aureliaSuccess && aureliaScroll) {
+    aureliaForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      aureliaScroll.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(() => {
+        aureliaSuccess.classList.add('show');
+      }, 400);
+    });
+  }
+
+  if (aureliaCloseSuccess && aureliaSuccess && aureliaForm && aureliaCheckout && aureliaCartCount) {
+    aureliaCloseSuccess.addEventListener('click', (e) => {
+      e.preventDefault();
+      aureliaSuccess.classList.remove('show');
+      aureliaCheckout.style.display = 'none';
+      aureliaForm.reset();
+      aureliaCartCount.textContent = '0';
+    });
+  }
+
+  // 4. BEHANCE CATEGORY FILTER TABS LOGIC
   const behanceTabs = document.querySelectorAll('.behance-tab');
   const portfolioCards = document.querySelectorAll('.portfolio-grid .p-card');
   
