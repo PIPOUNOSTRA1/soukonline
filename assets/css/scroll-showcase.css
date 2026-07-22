@@ -1,0 +1,261 @@
+/* ====================================================
+   SCROLL SHOWCASE - LUXURY BROWSER FRAME & INERTIA SCROLL
+   ==================================================== */
+
+:root {
+  --showcase-border-radius: 20px;
+  --showcase-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  --showcase-chrome-bg: #14111d;
+  --showcase-address-bg: #090710;
+  --showcase-accent: #a855f7;
+}
+
+.scroll-showcase-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Realistic macOS Browser Window Frame */
+.showcase-browser-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 70vh, 750px);
+  border-radius: var(--showcase-border-radius);
+  background: var(--showcase-chrome-bg);
+  box-shadow: var(--showcase-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.showcase-browser-frame:focus-within,
+.showcase-browser-frame.is-active {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 30px 70px -15px rgba(168, 85, 247, 0.25), 0 0 0 1px rgba(168, 85, 247, 0.5);
+}
+
+/* macOS Top Bar Chrome */
+.showcase-chrome-bar {
+  height: 44px;
+  background: var(--showcase-chrome-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 16px;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+/* macOS Window Traffic Light Controls */
+.showcase-window-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.showcase-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.showcase-dot.red { background: #ff5f56; border: 1px solid #e0443e; }
+.showcase-dot.yellow { background: #ffbd2e; border: 1px solid #dea123; }
+.showcase-dot.green { background: #27c93f; border: 1px solid #1aab29; }
+
+/* Address Bar Fake URL */
+.showcase-address-bar {
+  flex: 1;
+  max-width: 480px;
+  height: 28px;
+  background: var(--showcase-address-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 12px;
+  margin: 0 auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.02em;
+}
+
+.showcase-address-bar .lock-icon {
+  color: #4ade80;
+  font-size: 0.7rem;
+}
+
+.showcase-address-bar .domain {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.showcase-address-bar .path {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Content Viewport Canvas */
+.showcase-viewport-canvas {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  background: #06040a;
+  cursor: grab;
+}
+
+.showcase-viewport-canvas.is-dragging {
+  cursor: grabbing !important;
+}
+
+/* Scroll Image Layer */
+.showcase-scroll-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: block;
+  pointer-events: none;
+  transform: translateY(0px);
+  will-change: transform;
+  transition: filter 0.5s ease;
+}
+
+.showcase-scroll-image.is-loading {
+  filter: blur(12px);
+  opacity: 0.6;
+}
+
+/* Custom Progress Scrollbar Indicator */
+.showcase-progress-track {
+  position: absolute;
+  top: 44px;
+  left: 12px;
+  bottom: 12px;
+  width: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.showcase-browser-frame:hover .showcase-progress-track {
+  opacity: 1;
+}
+
+.showcase-progress-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(180deg, #a855f7, #ec4899);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+  transform: translateY(0px);
+  will-change: transform;
+}
+
+/* Floating Initial Hint Badge */
+.showcase-hint-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(168, 85, 247, 0.9);
+  color: #ffffff;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  z-index: 30;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: showcasePulseHint 2s infinite ease-in-out;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.showcase-hint-badge.fade-out {
+  opacity: 0;
+  transform: translate(-50%, 15px);
+}
+
+@keyframes showcasePulseHint {
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50% { transform: translate(-50%, -6px) scale(1.04); }
+}
+
+/* Auto-Scroll Toggle Button for Mobile/Desktop */
+.showcase-autoscroll-toggle {
+  position: absolute;
+  top: 56px;
+  left: 20px;
+  z-index: 25;
+  background: rgba(9, 7, 16, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.showcase-autoscroll-toggle:hover {
+  background: rgba(168, 85, 247, 0.3);
+  border-color: var(--showcase-accent);
+}
+
+/* Mobile Touches & Fallbacks */
+@media (max-width: 768px) {
+  .showcase-browser-frame {
+    height: 480px;
+    border-radius: 16px;
+  }
+  .showcase-chrome-bar {
+    padding: 0 12px;
+    gap: 10px;
+  }
+  .showcase-address-bar {
+    font-size: 0.72rem;
+  }
+  .showcase-hint-badge {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Prefers Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .showcase-scroll-image {
+    transition: none !important;
+  }
+  .showcase-hint-badge {
+    animation: none !important;
+  }
+}
