@@ -297,14 +297,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Pricing cards WhatsApp redirection
   document.querySelectorAll('.pricing-card a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const packageName = link.closest('.pricing-card')?.querySelector('.pricing-title')?.textContent || 'استفسار';
-      const customMsg = `مرحباً سوقك أونلاين، أود الاستفسار بخصوص باقة: (${packageName}) والمتابعة معكم لتصميم مشروعي.`;
-      const encodedMsg = encodeURIComponent(customMsg);
-      
+    const packageName = link.closest('.pricing-card')?.querySelector('.pricing-title')?.textContent || 'استفسار';
+    const customMsg = `مرحباً سوقك أونلاين، أود الاستفسار بخصوص باقة: (${packageName}) والمتابعة معكم لتصميم مشروعي.`;
+    const encodedMsg = encodeURIComponent(customMsg);
+    
+    link.setAttribute('href', `https://wa.me/${whatsappNumber}?text=${encodedMsg}`);
+    link.setAttribute('target', '_blank');
+    
+    link.addEventListener('click', () => {
       trackMarketingEvent('Lead', { content_name: packageName });
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMsg}`, '_blank');
     });
   });
 
